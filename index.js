@@ -43,7 +43,7 @@ const formatBlock = (block) => `#### ${formatDefinition(block.definition)} ${blo
 ${block.comment}`;
 const formatBlocks = format(formatBlock);
 
-const formatSection = group => ({title, section}) => group[section].length ? `### ${title}
+const formatSection = group => ({title, section}) => group[section] && group[section].length ? `### ${title}
 
 ${formatBlocks(group[section])}` : '';
 const formatSections = group => format(formatSection(group));
