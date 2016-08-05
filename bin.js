@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
 const doc = require('./');
-const fs = require('fs');
 
-console.log(doc(fs.readFileSync(process.argv[2], 'utf-8')));
+doc.parseMakefiles(process.argv.slice(2))
+	.then(doc.formatBlocks)
+	.then(console.log, e => {
+		console.error(e.stack);
+		process.exit(1);
+	});
