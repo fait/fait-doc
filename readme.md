@@ -19,9 +19,11 @@ $(call require, fait-doc)
 
 ## usage
 
-Run `make doc` to generate documentation. Without any configuration, fait-doc reads
-comments from all included makefiles that are *not* in `node_modules`. For an
-example of the output, see the next section of this readme.
+Run `make doc` to generate documentation from comment blocks in your makefiles.
+Without any configuration, fait-doc reads comments from all included makefiles
+that are *not* in `node_modules`. For an example of input and output, see
+[index.mk](index.mk) and the [documentation](#documentation) section of this
+readme.
 
 ## documentation
 ### Rules
