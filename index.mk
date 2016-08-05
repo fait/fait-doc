@@ -33,6 +33,3 @@ endif
 # Concatenate generated documentation with header and footer and output
 $(fait-doc-output): $$(fait-doc-header) generated.md $$(fait-doc-footer)
 	cat $^ > $@
-
-blah:
-	@echo $(foreach v, $(.VARIABLES), $(v) = $($(v)))
