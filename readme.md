@@ -28,42 +28,42 @@ readme.
 ## Documentation
 ### Rules
 
-#### 📄 `doc` ⬅️ `$(fait-doc-output)` [🔗](/Users/matthew.brennan/Projects/fait-doc/index.mk#L23)
+#### 📄 `doc` ⬅️ `$(fait-doc-output)` [🔗](index.mk#L23)
 
 Generate fait-doc documentation when `make doc` is run
 
-#### 📄 `$(fait-doc-intermediate)` ⬅️ `$(fait-doc-input)` [🔗](/Users/matthew.brennan/Projects/fait-doc/index.mk#L26)
+#### 📄 `$(fait-doc-intermediate)` ⬅️ `$(fait-doc-input)` [🔗](index.mk#L26)
 
 Generate documentation
 
-#### 📄 `$(fait-doc-output)` ⬅️ `$$(fait-doc-header) generated.md $$(fait-doc-footer)` [🔗](/Users/matthew.brennan/Projects/fait-doc/index.mk#L34)
+#### 📄 `$(fait-doc-output)` ⬅️ `$$(fait-doc-header) generated.md $$(fait-doc-footer)` [🔗](index.mk#L34)
 
 Concatenate generated documentation with header and footer and output
 
 ### Variables
 
-#### 🚩 `$(fait-doc-header)` [🔗](/Users/matthew.brennan/Projects/fait-doc/index.mk#L2)
+#### 🚩 `$(fait-doc-header)` [🔗](index.mk#L2)
 
 File to prepend to the generated documentation (none by default)
 
-#### 🚩 `$(fait-doc-footer)` [🔗](/Users/matthew.brennan/Projects/fait-doc/index.mk#L4)
+#### 🚩 `$(fait-doc-footer)` [🔗](index.mk#L4)
 
 File to append to the generated documentation (none by default)
 
-#### 🚩 `$(fait-doc-output)` [🔗](/Users/matthew.brennan/Projects/fait-doc/index.mk#L7)
+#### 🚩 `$(fait-doc-output)` [🔗](index.mk#L7)
 
 Output filename, readme.md by default
 
-#### 🚩 `$(fait-doc-intermediate)` [🔗](/Users/matthew.brennan/Projects/fait-doc/index.mk#L11)
+#### 🚩 `$(fait-doc-intermediate)` [🔗](index.mk#L11)
 
 Filename for intermediate (i.e. pre-concatenation) output file. By default this
 is cleaned up afterwords, see `$(fait-doc-intermediate-cleanup)`
 
-#### 🚩 `$(fait-doc-intermediate-cleanup)` [🔗](/Users/matthew.brennan/Projects/fait-doc/index.mk#L14)
+#### 🚩 `$(fait-doc-intermediate-cleanup)` [🔗](index.mk#L14)
 
 Set to `no` to keep the non-concatenated generated documentation output file
 
-#### 🚩 `$(fait-doc-input)` [🔗](/Users/matthew.brennan/Projects/fait-doc/index.mk#L18)
+#### 🚩 `$(fait-doc-input)` [🔗](index.mk#L18)
 
 Makefiles to parse for documentation. By default, we parse all makefiles from
 `$(MAKEFILE_LIST)` that aren't in `node_modules`.
