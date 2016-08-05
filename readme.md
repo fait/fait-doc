@@ -69,3 +69,5 @@ Makefiles to parse for documentation. By default, we parse all makefiles from
 `$(MAKEFILE_LIST)` that aren't in `node_modules`.
 
 
+## licence
+MIT
