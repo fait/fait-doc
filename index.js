@@ -34,7 +34,6 @@ const formatDefinition = def => {
 
 const format = fn => parts => parts.map(fn).join('\n\n');
 
-
 const formatBlock = block => `#### ${formatDefinition(block.definition)}
 
 ${block.comment}`;
