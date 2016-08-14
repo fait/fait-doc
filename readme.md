@@ -25,6 +25,8 @@ that are *not* in `node_modules`. For an example of input and output, see
 [index.mk](index.mk) and the [documentation](#documentation) section of this
 readme.
 
+Run `make help` to output generated documentation to the console.
+
 ## Documentation
 ### Rules
 
