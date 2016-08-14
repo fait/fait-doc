@@ -30,19 +30,19 @@ Run `make help` to output generated documentation to the console.
 ## Documentation
 ### Rules
 
-#### 📄 `doc` ⬅️ `$(fait-doc-output)` [🔗](index.mk#L24)
+#### 📄 `doc` ⬅️ `$(fait-doc-output)` [🔗](index.mk#L30)
 
 Generate fait-doc documentation when `make doc` is run
 
-#### 📄 `help` ⬅️ `$(fait-doc-intermediate)` [🔗](index.mk#L31)
+#### 📄 `help` ⬅️ `$(fait-doc-intermediate)` [🔗](index.mk#L37)
 
 Output generated documentation as console help
 
-#### 📄 `$(fait-doc-intermediate)` ⬅️ `$(fait-doc-input)` [🔗](index.mk#L35)
+#### 📄 `$(fait-doc-intermediate)` ⬅️ `$(fait-doc-input)` [🔗](index.mk#L41)
 
 Generate documentation
 
-#### 📄 `$(fait-doc-output)` ⬅️ `$$(fait-doc-header) generated.md $$(fait-doc-footer)` [🔗](index.mk#L43)
+#### 📄 `$(fait-doc-output)` ⬅️ `$$(fait-doc-header) generated.md $$(fait-doc-footer)` [🔗](index.mk#L49)
 
 Concatenate generated documentation with header and footer and output
 
@@ -69,7 +69,12 @@ is cleaned up afterwords, see `$(fait-doc-intermediate-cleanup)`
 
 Set to `no` to keep the non-concatenated generated documentation output file
 
-#### 🚩 `$(fait-doc-input)` [🔗](index.mk#L18)
+#### 🚩 `$(fait-doc-print-all)` [🔗](index.mk#L18)
+
+Set to `yes` to print help from all makefiles, even those in `node_modules`
+(e.g. fait core and fait-doc themselves)
+
+#### 🚩 `$(fait-doc-input)` [🔗](index.mk#L22)
 
 Makefiles to parse for documentation. By default, we parse all makefiles from
 `$(MAKEFILE_LIST)` that aren't in `node_modules`.
