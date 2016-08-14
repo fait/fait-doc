@@ -23,7 +23,7 @@ fait-doc-input = $(call filter-out-match,node_modules, $(MAKEFILE_LIST))
 # Generate fait-doc documentation when `make doc` is run
 doc :: $(fait-doc-output)
 
-ifneq ($(findstring help, $(MAKECMDGOALS)),)
+ifeq ($(MAKECMDGOALS),help)
 MAKEFLAGS += --silent # help target runs silently
 endif
 
