@@ -18,9 +18,18 @@ fait-doc-intermediate-cleanup = yes
 fait-doc-input = $(call filter-out-match,node_modules, $(MAKEFILE_LIST))
 
 ~fait-doc-bin = $(~module-dir)bin.js
+~fait-markdown-bin = $(~module-dir)markdown.js
 
 # Generate fait-doc documentation when `make doc` is run
 doc :: $(fait-doc-output)
+
+ifneq ($(findstring help, $(MAKECMDGOALS)),)
+MAKEFLAGS += --silent # help target runs silently
+endif
+
+# Output generated documentation as console help
+help :: $(fait-doc-intermediate)
+	@$(~fait-markdown-bin) $<
 
 # Generate documentation
 $(fait-doc-intermediate): $(fait-doc-input)

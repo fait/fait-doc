@@ -28,15 +28,19 @@ readme.
 ## Documentation
 ### Rules
 
-#### 📄 `doc` ⬅️ `$(fait-doc-output)` [🔗](index.mk#L23)
+#### 📄 `doc` ⬅️ `$(fait-doc-output)` [🔗](index.mk#L24)
 
 Generate fait-doc documentation when `make doc` is run
 
-#### 📄 `$(fait-doc-intermediate)` ⬅️ `$(fait-doc-input)` [🔗](index.mk#L26)
+#### 📄 `help` ⬅️ `$(fait-doc-intermediate)` [🔗](index.mk#L31)
+
+Output generated documentation as console help
+
+#### 📄 `$(fait-doc-intermediate)` ⬅️ `$(fait-doc-input)` [🔗](index.mk#L35)
 
 Generate documentation
 
-#### 📄 `$(fait-doc-output)` ⬅️ `$$(fait-doc-header) generated.md $$(fait-doc-footer)` [🔗](index.mk#L34)
+#### 📄 `$(fait-doc-output)` ⬅️ `$$(fait-doc-header) generated.md $$(fait-doc-footer)` [🔗](index.mk#L43)
 
 Concatenate generated documentation with header and footer and output
 

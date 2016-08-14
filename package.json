@@ -22,6 +22,8 @@
     "@quarterto/parse-make-comment-blocks": "^1.1.0",
     "@quarterto/parse-make-definitions": "^1.4.0",
     "lodash.groupby": "^4.4.0",
+    "marked": "^0.3.5",
+    "marked-terminal": "^1.6.1",
     "mz": "^2.4.0"
   },
   "devDependencies": {
