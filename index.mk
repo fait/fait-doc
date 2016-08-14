@@ -13,9 +13,15 @@ fait-doc-intermediate = generated.md
 # Set to `no` to keep the non-concatenated generated documentation output file
 fait-doc-intermediate-cleanup = yes
 
+# Set to `yes` to print help from all makefiles, even those in `node_modules`
+# (e.g. fait core and fait-doc themselves)
+fait-doc-print-all = no
+
 # Makefiles to parse for documentation. By default, we parse all makefiles from
 # `$(MAKEFILE_LIST)` that aren't in `node_modules`.
-fait-doc-input = $(call filter-out-match,node_modules, $(MAKEFILE_LIST))
+fait-doc-input = $(if $(findstring yes,$(fait-doc-print-all)),\
+	$(MAKEFILE_LIST),\
+	$(call filter-out-match,node_modules, $(MAKEFILE_LIST)))
 
 ~fait-doc-bin = $(~module-dir)bin.js
 ~fait-markdown-bin = $(~module-dir)markdown.js
