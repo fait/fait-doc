@@ -30,11 +30,11 @@ Run `make help` to output generated documentation to the console.
 ## Documentation
 ### Rules
 
-#### 📄 `doc` ⬅️ `$(fait-doc-output)` [🔗](index.mk#L30)
+#### 📋 `doc` ⬅️ `$(fait-doc-output)` [🔗](index.mk#L30)
 
 Generate fait-doc documentation when `make doc` is run
 
-#### 📄 `help` ⬅️ `$(fait-doc-intermediate)` [🔗](index.mk#L37)
+#### 📋 `help` ⬅️ `$(fait-doc-intermediate)` [🔗](index.mk#L37)
 
 Output generated documentation as console help
 
