@@ -10,10 +10,15 @@ const parse = src => parseMakeCommentBlocks(src).map(block => {
 
 const variableEmoji = {
 	recursive: '🚩',
-	simple: '📌',
+	simple: '📍',
 	append: '📎',
 	multiline: '💬',
 };
+
+const ruleEmoji = def =>
+	  def.target.indexOf('%') >= 0 ? '📝'
+	: def.isDoubleColon            ? '📋'
+	: '📄';
 
 const formatLink = (lineNo, file) =>
 	`[🔗](${file}#L${lineNo})`;
@@ -28,7 +33,7 @@ const formatDefinition = (def, file) => {
 			}
 
 			if(def.prerequisites) { // ordinary pattern or explicit rule
-				return `${def.target.indexOf('%') >= 0 ? '📝' : '📄'} \`${def.target}\` ⬅️ \`${def.prerequisites}\``;
+				return `${ruleEmoji(def)} \`${def.target}\` ⬅️ \`${def.prerequisites}\``;
 			}
 
 			// simple explicit rule
